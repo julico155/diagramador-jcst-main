@@ -17,7 +17,7 @@
                         {{ __('Home') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('diagramador.index') }}" :active="request()->routeIs('diagramador.index')">
-                        {{ __('Mis Diagramas Ivana lengstorff') }}
+                        {{ __('Mis Diagramas') }}
                     </x-nav-link>
                 </div>
             </div>
