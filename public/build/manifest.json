@@ -1,0 +1,55 @@
+{
+  "_axios-21b846bc.js": {
+    "file": "assets/axios-21b846bc.js"
+  },
+  "_index-fb0b8ccc.js": {
+    "file": "assets/index-fb0b8ccc.js"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-6776a4b9.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-74f548be.js",
+    "imports": [
+      "_axios-21b846bc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/bootstrap.js": {
+    "file": "assets/bootstrap-74f548be.js",
+    "imports": [
+      "_axios-21b846bc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/bootstrap.js"
+  },
+  "resources/js/custom-modal.js": {
+    "file": "assets/custom-modal-a5da3abe.js",
+    "isEntry": true,
+    "src": "resources/js/custom-modal.js"
+  },
+  "resources/js/diagramador.js": {
+    "file": "assets/diagramador-6561711c.js",
+    "imports": [
+      "_index-fb0b8ccc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/diagramador.js"
+  },
+  "resources/js/modal-link.js": {
+    "file": "assets/modal-link-6da69f4d.js",
+    "isEntry": true,
+    "src": "resources/js/modal-link.js"
+  },
+  "resources/js/socket-client.js": {
+    "file": "assets/socket-client-01c927c4.js",
+    "imports": [
+      "_index-fb0b8ccc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/socket-client.js"
+  }
+}
