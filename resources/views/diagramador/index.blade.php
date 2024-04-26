@@ -88,69 +88,24 @@
             <div class="container mx-auto mt-8">
                 <div class="w-full bg-white rounded-lg shadow-md p-4">
                     <h1 class="text-3xl font-semibold my-4">Trabajos en colaboración</h1>
-                    {{-- <table class="min-w-full border border-collapse border-gray-300">
-                        <thead>
-                            <tr>
-                                <th class="border border-gray-300 px-4 py-2">ID</th>
-                                <th class="border border-gray-300 px-4 py-2">Título</th>
-                                <th class="border border-gray-300 px-4 py-2">Autor</th>
-                                <th class="border border-gray-300 px-4 py-2">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($diagramasInvitados as $diagrama)
-                                <tr>
-                                    <td class="border border-gray-300 px-4 py-2 text-center">{{ $diagrama['id'] }}</td>
-                                    <td class="border border-gray-300 px-4 py-2 text-center">{{ $diagrama['titulo'] }}</td>
-                                    <td class="border border-gray-300 px-4 py-2 text-center">{{ $diagrama['autornombre'] }}
-                                    </td>
-                                    <td class="border border-gray-300 px-4 py-2 text-center">
-                                        <div class="flex items-center justify-center">
-                                            <a href="{{ route('diagramador.show', $diagrama['id']) }}"
-                                                class="text-green-500 hover:text-green-700 mr-2">Trabajar</a>
-                                            <form action="{{ route('invitadoDelete') }}" method="POST" class="inline">
-                                                @csrf
-                                                @method('POST')
-                                                <input type="text" name="id_diagrama" value="{{ $diagrama['id'] }}"
-                                                    class="hidden">
-                                                <input type="text" name="id_invitado" value="{{ $email }}"
-                                                    class="hidden">
-                                                <button type="submit"
-                                                    class="text-red-500 hover:text-red-700">Abandonar</button>
-                                            </form>
-                                        </div>
-                                    </td>
 
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table> --}}
                     @foreach ($diagramasInvitados as $diagrama)
-                        <div class="max-w-md bg-white p-8 rounded-md shadow-md m-2">
-                            <!-- Imagen -->
-                            <img src="https://corporate-assets.lucid.co/chart/ab2608a0-d145-4f8d-a33b-85a7ae1186be.png"
-                                alt="Imagen" class="w-full h-32 object-cover mb-4 rounded-md">
-
-                            <!-- Título -->
-                            <h2 class="text-xl font-semibold mb-2">{{ $diagrama['titulo'] }}</h2>
-
-                            <!-- Autor -->
-                            <p class="text-gray-600 mb-4">Autor: {{ $diagrama['autornombre'] }}</p>
-
-                            <!-- Botones -->
-                            <div class="flex space-x-4">
-                                <a href="{{ route('diagramador.show', $diagrama['id']) }}"
-                                    class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Trabajar</a>
-                                <form action="{{ route('invitadoDelete') }}" method="POST" class="inline">
-                                    @csrf
-                                    @method('POST')
-                                    <input type="text" name="id_diagrama" value="{{ $diagrama['id'] }}" class="hidden">
-                                    <input type="text" name="id_invitado" value="{{ $email }}" class="hidden">
-                                    <button type="submit"
-                                        class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">Abandonar</button>
-                                </form>
-                            </div>
+                    <div class="max-w-screen-md w-96 bg-white p-8 rounded-md shadow-md m-2">
+                        <h2 class="text-xl font-semibold mb-2">{{ $diagrama['titulo'] }}</h2>
+                        <p class="text-gray-600 mb-4">Autor: {{ $diagrama['autornombre'] }}</p>
+                        <div class="flex justify-center space-x-4">
+                            <a href="{{ route('diagramador.show', $diagrama['id']) }}"
+                                class="px-4 py-2 text-sm font-medium text-white bg-green-500 border border-gray-200 rounded-md hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:text-green-700">Trabajar</a>
+                            <form action="{{ route('invitadoDelete') }}" method="POST" class="inline">
+                                @csrf
+                                @method('POST')
+                                <input type="text" name="id_diagrama" value="{{ $diagrama['id'] }}" class="hidden">
+                                <input type="text" name="id_invitado" value="{{ $email }}" class="hidden">
+                                <button type="submit"
+                                    class="px-4 py-2 text-sm font-medium text-white bg-red-500 border border-gray-200 rounded-md hover:bg-red-600 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:text-red-700">Abandonar</button>
+                            </form>
                         </div>
+                    </div>                    
                     @endforeach
                 </div>
             </div>
