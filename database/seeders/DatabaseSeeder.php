@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
     }
     public function crearUsuario(){
         $u = new User();
-        $u->name = "Ivana Lengstorff";
-        $u->email = "ivanalengstorff27@gmail.com";
+        $u->name = "Julio Gutierrez";
+        $u->email = "juliogutierrezv15@gmail.com";
         $u->password= bcrypt("password");
         $u->save();
 

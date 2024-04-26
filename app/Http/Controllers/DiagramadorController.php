@@ -75,6 +75,36 @@ class DiagramadorController extends Controller
         return view('diagramador.create');
     }
 
+    public function importarvista(){
+        return view('diagramador.import');
+    }
+
+    public function importxml(Request $request){
+         // Validar si se ha subido un archivo y los campos del formulario
+            $request->validate([
+                'archivo_xml' => 'required|mimes:xml',
+                'autornombre' => 'required|string|max:255',
+                'autor' => 'required|integer',
+                'titulo' => 'required|string|max:255',
+                // Puedes agregar más reglas de validación según sea necesario
+            ]);
+
+            // Crear un nuevo registro de diagramador
+            $diagrama = new diagramador();
+            $diagrama->titulo = $request->titulo;
+            $diagrama->autornombre = $request->autornombre;
+            $diagrama->autor = $request->autor;
+            $diagrama->save();
+
+            // Obtener el archivo XML cargado
+            $archivoXML = $request->file('archivo_xml');
+
+            // Procesar el archivo XML y otras operaciones necesarias
+
+            // Redirigir de vuelta a la página anterior con un mensaje de éxito
+            return redirect()->back()->with('success', 'El archivo XML se ha importado correctamente.');
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -93,8 +123,6 @@ class DiagramadorController extends Controller
         return redirect()->route('diagramador.index')->with('success', 'Diagrama creado correctamente');
     }
 
-    // Esta funcion la uso para directo  hasta el diagramador
-    // Este es el boton trabajar en el index de diagramador
     public function show(diagramador $diagramador)
     {
         // dd($diagramador);
@@ -474,7 +502,7 @@ class DiagramadorController extends Controller
 
         $headers = [
             'Content-type'        => 'text/html; charset=UTF-8',
-            'Content-Disposition' => 'attachment; filename="Ivana-' . $fecha . '.xml"',
+            'Content-Disposition' => 'attachment; filename="Diagrama-' . $fecha . '.xml"',
         ];
 
         return new Response($html, 200, $headers);

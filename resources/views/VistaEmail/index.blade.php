@@ -10,17 +10,11 @@
 
         <ol class="list-decimal list-inside text-lg mb-6">
             <li>Haz clic en el siguiente enlace para registrarte en nuestra plataforma:
-                <a href="http://ivanalengstorffaccesorios.shop/">www.ivanalengstorffaccesorios.shop</a>
+                <a href="http://3.129.24.72/">diagramador.com</a>
             </li>
             <li>Completa el proceso de registro y crea tu perfil.</li>
             <li>Ve a la seccion de diagramas y podras ver la lista de diagramas en colaboracion.</li>
         </ol>
 
-        <p class="text-lg mb-6">Si tienes alguna pregunta o necesitas asistencia durante el proceso de registro, no
-            dudes en contactarme directamente a través de este correo electrónico.</p>
-
-        <p class="text-lg mb-6">Esperamos contar contigo como colaborador.</p>
-
-        <p class="text-lg">¡Gracias por tu tiempo y consideración!</p>
     </div>
 </div>

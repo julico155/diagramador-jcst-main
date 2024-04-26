@@ -46,4 +46,13 @@ Route::middleware([
     Route::Post('linkStore', [LinkController::class, 'store'])->name('linkStore');
 
     Route::Post('invitadoDelete', [InvitadoController::class,'invitadoDelete'])->name('invitadoDelete');
+
+
+    // routes/web.php
+    // routes/web.php
+
+    Route::get('importarvista', [DiagramadorController::class, 'importarvista'])->name('importarvista');
+
+    Route::post('/importar-xml', 'TuControlador@importarCase')->name('importar-xml');
+
 });
