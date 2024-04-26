@@ -3,6 +3,10 @@
 @section('content')
     @vite(['resources/js/diagramador.js', 'resources/js/custom-modal.js', 'resources/js/modal-link.js'])
 
+    <div id="diagramador"
+        style="border: 0px solid black; width: 100%; height: 570px; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: auto;">
+    </div>
+
     <main>
         <x-custom-modal></x-custom-modal>
         <x-modal-link></x-modal-link>
@@ -58,8 +62,6 @@
         </div>
     </main>
 
-    <div id="diagramador"
-        style="border: 0px solid black; width: 100%; height: 570px; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: auto;">
-    </div>
+
     
 @endsection
