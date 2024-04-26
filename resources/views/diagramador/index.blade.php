@@ -87,7 +87,7 @@
         <div>
             <div class="container mx-auto mt-8">
                 <div class="w-full bg-white rounded-lg shadow-md p-4">
-                    <h1 class="text-3xl font-semibold my-4">Trabajos en colaboración</h1>
+                    <h1 class="text-3xl font-semibold my-4">Donde soy Colaborador</h1>
 
                     @foreach ($diagramasInvitados as $diagrama)
                     <div class="max-w-screen-md w-96 bg-white p-8 rounded-md shadow-md m-2">
