@@ -6,7 +6,7 @@
     "file": "assets/index-fb0b8ccc.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-6776a4b9.css",
+    "file": "assets/app-d621ff8d.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -32,7 +32,7 @@
     "src": "resources/js/custom-modal.js"
   },
   "resources/js/diagramador.js": {
-    "file": "assets/diagramador-6561711c.js",
+    "file": "assets/diagramador-bc96f84a.js",
     "imports": [
       "_index-fb0b8ccc.js"
     ],
@@ -45,7 +45,7 @@
     "src": "resources/js/modal-link.js"
   },
   "resources/js/socket-client.js": {
-    "file": "assets/socket-client-01c927c4.js",
+    "file": "assets/socket-client-f6f41ae3.js",
     "imports": [
       "_index-fb0b8ccc.js"
     ],
